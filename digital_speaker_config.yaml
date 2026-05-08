@@ -3,9 +3,12 @@ substitutions:
 
 external_components:
   # For SPDIF (TOSLINK) support https://github.com/esphome/esphome/pull/8065:
-  - source: github://pr#8065
+  - source:
+      type: git
+      url: https://github.com/johnboiles/esphome
+      ref: 996d283286514e3049122ce903bebd1dc6cb5b1a
     components: [i2s_audio]
-    refresh: 0s
+    refresh: 1h
 
 i2s_audio:
   - id: i2s_audio_bus
